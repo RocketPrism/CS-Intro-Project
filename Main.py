@@ -19,7 +19,7 @@ questions = ("1. What is your name?", "2. What grade are you in?", "3. What does
              "5. What can your teacher do to make you feel welcome in class?",
              "6. How would you like your accomplishments to be celebrated?",
              "7. What is something new about yourself?",
-             "8. What’s the coolest assignment you’ve ever done?",
+             "8. What's the coolest assignment you've ever done?",
              "9. What problem do you want to solve?",
              "10. What is the biggest impact computers have made on society? Is that impact positive or negative?")
 qnumber = 0
@@ -30,14 +30,14 @@ def invalid():
     validq = str.upper(input("Invalid question. Must be a number between 1 and 10. OK?"))
     # print(validq)
     if validq == "YES":
-        isvalidinf = True
+        pass
     else:
         while validq != "YES":
             print("Answer must be yes.")
             validq = input("Invalid question. Must be a number between 1 and 10. OK?")
 
 
-while 0 == 0:
+while True:
     qnumber = 0
 
     for q in questions:
@@ -48,9 +48,8 @@ while 0 == 0:
     if qask.isnumeric():
         qask = int(qask) - 1
     else:
-        isvalid = False
-        while not isvalid:
             invalid()
+            qask = 0
 
     if qask+1 <= 10:
         print()
