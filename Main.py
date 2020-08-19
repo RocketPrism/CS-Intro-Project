@@ -1,6 +1,5 @@
 answers = ("Hudson", "9th",
-           "Success would be for me to complete the class "
-           "with a newfound understanding for programs and the computers and engines that run them.",
+           "Success would be for me to complete the class with a newfound understanding for programs and the computers and engines that run them.",
            "I would like to take the knowledge I have about programs and code and expand that to be able to apply it.",
            "Be understanding and accept feedback. "
            "Sometimes things don’t work and it’s important that we can work it out.",
