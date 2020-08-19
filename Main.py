@@ -27,14 +27,14 @@ isvalid = True
 
 
 def invalid():
-    validq = str.upper(input("Invalid question. Must be a number between 1 and 10. OK?"))
+    validq = str.upper(input("Invalid input. Must be a number between 1 and 10. OK?"))
     # print(validq)
     if validq == "YES":
         pass
     else:
         while validq != "YES":
             print("Answer must be yes.")
-            validq = input("Invalid question. Must be a number between 1 and 10. OK?")
+            validq = input("Invalid input. Must be a number between 1 and 10. OK?")
 
 
 while True:
