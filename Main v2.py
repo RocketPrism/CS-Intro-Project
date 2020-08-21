@@ -1,4 +1,3 @@
-# in dev- doesn't work
 answers = ("Hudson", "9th",
            "Success would be for me to complete the class with a newfound understanding for programs and the computers and engines that run them.",
            "I would like to take the knowledge I have about programs and code and expand that to be able to apply it.",
@@ -23,9 +22,8 @@ questions = ("1. What is your name?", "2. What grade are you in?", "3. What does
              "9. What problem do you want to solve?",
              "10. What is the biggest impact computers have made on society? Is that impact positive or negative?")
 qnumber = 0
-isvalid = True
 
-
+# Catches invalid inputs and clarifies valid inputs to user
 def invalid():
     validq = str.upper(input("Invalid input. Must be a number between 1 and 10. OK?"))
     # print(validq)
@@ -34,25 +32,28 @@ def invalid():
     else:
         while validq != "YES":
             print("Answer must be yes.")
-            validq = input("Invalid input. Must be a number between 1 and 10. OK?")
+            validq = str.upper(input("Invalid input. Must be a number between 1 and 10. OK?"))
 
 
 while True:
+    # resets q to repeat the loop
     qnumber = 0
-
+    
+    # prints questions
     for q in questions:
         print(questions[qnumber])
         qnumber = qnumber + 1
 
+    # determines what question user wants to ask
     qask = input("Which question would you like to ask?")
     if qask.isnumeric():
         qask = int(qask) - 1
     else:
             invalid()
             qask = "invalid"
-            
-    if qask.isNumeric():
-        if qask+1 <= 10:
+    
+    if str(qask).isnumeric():  # Checks if input is an integer
+        if qask+1 <= 10:  # Verifies input is withing range
             print()
             print(questions[qask])
             print(answers[qask])
